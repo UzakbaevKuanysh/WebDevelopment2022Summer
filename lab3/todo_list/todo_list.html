@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <style>
+        .h1{
+            background-color: black;
+            height:fit-content;
+            padding:20px 100px;
+            color:grey;
+            
+        }
+        .container{
+            margin-left:30%;
+            margin-top:100px;
+        }
+        .btn-add{
+            background-color:rgb(28, 130, 247);
+            margin-left:50px;
+            border-radius:5px;
+            border-color:rgb(28,130,247);
+            color:white;
+            font-size:larger;
+            padding:10px 20px;
+        }
+        .form{
+            float:left;
+            margin-left:100px;
+            
+        }
+        ul {
+            margin-left: 28%;
+            padding: 0;
+}
+
+
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            background: #eee;
+            font-size: 18px;
+            transition: 0.2s;
+            
+            
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            
+        }
+
+        
+        ul li:nth-child(odd) {
+        background: #f9f9f9;
+        }
+
+        
+        ul li:hover {
+        background: #ddd;
+        }
+
+        
+        ul li.checked {
+        background: #888;
+        color: #fff;
+        text-decoration: line-through;
+        }
+
+       
+        ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+
+        
+        .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+       
+        }
+
+            .close:hover {
+            background-color: #f44336;
+            
+            color: white;
+        }
+
+       
+        .header {
+            background-color: #f44336;
+            padding: 30px 40px;
+            color: white;
+            text-align: center;
+        }
+
+     
+        .header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+    input {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        width: 75%;
+        padding: 10px;
+        float: left;
+        font-size: 16px;
+    }
+
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class = "h1"><h1>ToDo List</h1></div>
+    <div class ="container"><h2>ToDo List</h2>
+   
+    <form class = "form">
+        <input type ="text" id="myInput" placeholder="New Task" style="width:400px; padding:10px 20px; border-radius:5px;">
+    </form>
+    <span onclick="newElement()"><button class = "btn-add">Add</button></span>
+    
+    </div>
+    <ul id="myUL">
+        <li>Test</li>
+        <li class="checked">Test2</li>
+        
+      </ul>
+
+    
+    <script src ="todo_list.js">
+        
+    </script>
+
+    
+</body>
+</html>
